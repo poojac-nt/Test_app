@@ -14,7 +14,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
         body: Padding(
       padding: EdgeInsets.all(10),
       child: Column(
-        children: [],
+        children: [
+          Row(
+            children: [],
+          )
+        ],
       ),
     ));
   }
