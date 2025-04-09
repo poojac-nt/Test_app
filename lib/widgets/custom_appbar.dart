@@ -11,14 +11,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget> actions;
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      title: Text(title),
-      centerTitle: true,
-      leading: leading,
-      actions: actions,
+    return Padding(
+      padding: EdgeInsets.only(top: 20),
+      child: AppBar(
+        title: Text(title),
+        centerTitle: true,
+        leading: leading,
+        actions: actions,
+      ),
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(100);
 }
