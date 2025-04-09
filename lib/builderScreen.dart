@@ -22,17 +22,14 @@ class _GridviewScreenState extends State<GridviewScreen> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: CustomAppBar(
-          leading: Icon(Icons.arrow_back_ios_new_rounded),
-          title: "Radha",
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 18.0),
-              child: Icon(
-                Icons.more_horiz,
-              ),
-            )
-          ],
-        ),
+            title: "Radha",
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: Icon(Icons.more_horiz),
+              )
+            ],
+            leading: Icon((Icons.arrow_back_ios_new_rounded))),
         body: appState.pages[appState.currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           items: [
