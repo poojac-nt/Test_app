@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gridview_test/screens/favorite_screen.dart';
 import 'package:gridview_test/screens/home_screen.dart';
-import 'package:gridview_test/screens/profile_screen.dart';
-import 'package:provider/provider.dart';
+
+import '../screens/profile_screen_sliver.dart';
 
 class MyAppState extends ChangeNotifier {
   List<String?> imageUrls = [
@@ -23,7 +23,11 @@ class MyAppState extends ChangeNotifier {
     "https://cdn.pixabay.com/photo/2023/10/29/13/21/waterfall-8350178_640.jpg"
   ];
   int currentIndex = 0;
-  List<Widget> pages = const [HomeScreen(), FavoriteScreen(), ProfileScreen()];
+  List<Widget> pages = const [
+    HomeScreen(),
+    FavoriteScreen(),
+    SliverProfileScreen()
+  ];
   List<String> favs = [];
   void toggleFavorite(String url) {
     if (favs.contains(url)) {
