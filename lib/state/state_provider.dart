@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gridview_test/screens/favorite_screen.dart';
 import 'package:gridview_test/screens/home_screen.dart';
-import 'package:gridview_test/screens/profile_screen.dart';
-import 'package:provider/provider.dart';
+import '../screens/profile_screen.dart';
 
 class MyAppState extends ChangeNotifier {
   List<String?> imageUrls = [

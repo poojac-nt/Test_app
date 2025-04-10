@@ -4,6 +4,7 @@ import 'package:gridview_test/screens/favorite_screen.dart';
 import 'package:gridview_test/screens/home_screen.dart';
 import 'package:gridview_test/screens/profile_screen.dart';
 import 'package:gridview_test/state/state_provider.dart';
+import 'package:gridview_test/widgets/custom_appbar.dart';
 import 'package:provider/provider.dart';
 
 class GridviewScreen extends StatefulWidget {
@@ -20,19 +21,15 @@ class _GridviewScreenState extends State<GridviewScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          leading: Icon(Icons.arrow_back_ios_new_rounded),
-          title: Text("Radha"),
-          centerTitle: true,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 18.0),
-              child: Icon(
-                Icons.more_horiz,
-              ),
-            )
-          ],
-        ),
+        appBar: CustomAppBar(
+            title: "Radha",
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: Icon(Icons.more_horiz),
+              )
+            ],
+            leading: Icon((Icons.arrow_back_ios_new_rounded))),
         body: appState.pages[appState.currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           items: [
