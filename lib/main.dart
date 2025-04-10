@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gridview_test/builderScreen.dart';
+import 'package:gridview_test/screens/builderScreen.dart';
 import 'package:gridview_test/state/state_provider.dart';
 import 'package:gridview_test/utility/themeProvider.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +32,9 @@ class MyApp extends StatelessWidget {
               colorScheme: themeProvider.lightScheme,
               useMaterial3: true,
             ),
-            home: GridviewScreen(),
+            home: MyHomePage(
+              title: "Flutter App",
+            ),
           );
         },
       ),

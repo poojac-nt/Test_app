@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:gridview_test/state/state_provider.dart';
 import 'package:gridview_test/widgets/gridview.dart';
-import 'package:provider/provider.dart';
-
-import '../widgets/custom_column.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -55,19 +52,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    CustomColumn(
+                    Column(
                       children: [
                         const Text("Posts"),
                         const Text("75", style: TextStyle(fontSize: 20))
                       ],
                     ),
-                    CustomColumn(
+                    Column(
                       children: [
                         const Text("Followers"),
                         const Text("735", style: TextStyle(fontSize: 20))
                       ],
                     ),
-                    CustomColumn(
+                    Column(
                       children: [
                         const Text("Following"),
                         const Text("120", style: TextStyle(fontSize: 20))
